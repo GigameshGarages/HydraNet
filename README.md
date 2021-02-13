@@ -4,9 +4,9 @@ Hedera Token Service Integration with Zokrates JS
 ## Inspiration
 - zkERC20
 - zkTokens
+- ZokratesJS
 - Zether Framework
-- NoteStream
-- AZTECH Protocol
+- AZTEC Protocol
 - ERC 1724
 - Hedera Consensus Service
 
