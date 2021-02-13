@@ -1,9 +1,9 @@
 [![GitHub license](https://img.shields.io/github/license/hashgraph/hedera-hts-demo)](https://github.com/hashgraph/hedera-hts-demo/blob/master/LICENSE)
 [![Discord](https://img.shields.io/badge/discord-join%20chat-blue.svg)](https://hedera.com/discord)
 
-# Hedera Token Service (HTS) demo
+# Hedera Token Service (HTS) ZokratestJS Integration
 
-This demo is a user interface written in Javascript (Vue.JS) to illustrate the use of the Hedera Token Service. When first launched, the demo will create three accounts as follows:
+This demo is a web application written in Javascript (Vue.JS) to illustrate the use of the Hedera Token Service together with the Zero Knowledge Proof Libray Zokrates.. When first launched, the demo will create three accounts as follows:
 * An account for the owner/admin of new tokens
 * Two accounts representing users (wallet holders) that will use the token, Alice and Bob
 * Another account representing a marketplace (escrow) for the purpose of holding tokens that have been offered for sale
@@ -14,6 +14,8 @@ The demo enables you to:
 * Create tokens
 * Mint and Burn
 * Associate and Dissociate tokens to/from accounts
+* Verification of Token Supply Range
+* Verification of Token Ownership
 * Manage KYC and Freeze for token/account relationships
 * Transfer from treasury (owner) to users
 * Transfer between users
@@ -121,25 +123,10 @@ These properties (along with an image if necessary) as then stored in an immutab
 You may edit or add to the templates by editing the `/public/tokenTemplates.json` file, following guidelines from [the vjsf component](https://koumoul-dev.github.io/vuetify-jsonschema-form/latest/about).
 Note that if you wish to include a picture in your NFT specification, the property must be called `photo` since the UI depends on that field value.
 
-_Note: An alternative to using files on Hedera would be to host the file on a shared location and use a hash of the file as the symbol for the token so that the validity of the file can be verified at any time._  
-
-## Marketplace
-
-A pseudo-market place is enabled in the demo, this enables a token to be transferred to a market place (an escrow account of sorts) along with an offer price in hBar.
-
-One a token has been transferred to the market place, Alice or Bob can request transfer of the token from the marketplace to their account in exchange for the offered hBar value whereby they will own the token in exchange for the hBar value which will be transferred to the account that transferred the token to the market place in the first place.
-
-_Note: If Alice transferred a token to the market place, she's not able to buy the token, only Bob can. If the issuer (owner) of the token transferred to the marketplace, both Bob and Alice can buy it._
-
 ## Contributing
 
 Contributions are welcome. Please see the [contributing](CONTRIBUTING.md) guide to see how you can get
 involved.
-
-## Code of Conduct
-
-This project is governed by the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are
-expected to uphold this code of conduct. Please report unacceptable behavior to [oss@hedera.com](mailto:oss@hedera.com)
 
 ## License
 
